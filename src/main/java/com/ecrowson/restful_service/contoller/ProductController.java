@@ -39,5 +39,13 @@ public class ProductController {
         return new Product("888","Returning a single product",new BigDecimal("458.44"));
     }
 
+    @PatchMapping("/product")
+    public void pathProduct(@RequestBody final Product product) {
+        System.out.println(product);
+    }
 
+    @DeleteMapping("/product/{id}")
+    public void deleteProduct(@PathVariable final String id) {
+        System.out.println(id);
+    }
 }
