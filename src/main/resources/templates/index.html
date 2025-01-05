@@ -34,8 +34,8 @@
   </nav>
   <div class="slider">
     <!--/*@thymesVar id="products" type="java.util.List"*/-->
-    <div class="slider-wrapper" th:each="product : ${products}">
-      <div class="slider-item">
+    <div class="slider-wrapper">
+      <div class="slider-item" th:each="product : ${products}">
         <img th:src="@{/images/{name}.png(name=${product.description})}" alt="notimage" class="slider-img">
         <div class="slider-background"></div>
         <h1 class="slider-title" th:text="${product.description}"></h1>
@@ -165,7 +165,7 @@
       </div>
     </div>
   </footer>
-  <script src="/app.js"></script>
+  <script src="/scripts/app.js"></script>
 </body>
 
 </html>
