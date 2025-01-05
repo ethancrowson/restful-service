@@ -1,26 +1,45 @@
 package com.ecrowson.restful_service.model;
 
+import jakarta.persistence.*;
+
+
 import java.math.BigDecimal;
-
+@Entity
+@Table
 public class Product {
+    @Id
+    @SequenceGenerator(
+            name = "product_sequence",
+            sequenceName = "product_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "product_sequence"
+    )
+    private Integer id;
+    private String description;
+    private BigDecimal price;
 
-    private final String id;
-    private final String desc;
-    private final BigDecimal price;
+    public Product() {}
 
-
-    public Product(String id, String desc, BigDecimal price) {
+    public Product(Integer id, String description, BigDecimal price) {
         this.id = id;
-        this.desc = desc;
+        this.description = description;
         this.price = price;
     }
 
-    public String getId() {
+    public Product(String description, BigDecimal price) {
+        this.description = description;
+        this.price = price;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
     public BigDecimal getPrice() {
@@ -31,8 +50,16 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "id='" + id + '\'' +
-                ", desc='" + desc + '\'' +
+                ", description='" + description + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }
