@@ -10,22 +10,22 @@ body{
 
 nav{
     background-color: black;
-    color: white;
+    color: black;
     padding: 20px 50px;
-}
-
-.nav-top{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo{
-
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search{
     display: flex;
+    flex-direction: row;
     align-items: center;
     background-color: gray;
     padding: 10px 20px;
@@ -45,23 +45,12 @@ nav{
     width: 20px;
     height: 20px;
 }
-.limited-offer{
-    font-size: 20px;
-    border-bottom: 2px solid gray;
-    cursor: pointer;
-   }
 
-.nav-bottom{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .menu-item{
-    margin-right: 50px;
     cursor: pointer;
     color: lightgray;
-
+    margin: 0 10px;
 }
 
 .slider{
