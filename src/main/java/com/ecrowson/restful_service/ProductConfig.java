@@ -12,7 +12,7 @@ import java.util.List;
 @Configuration
 public class ProductConfig {
 
-    @Bean
+    @Bean(name="Product_CLR")
     CommandLineRunner commandLineRunner(ProductRepo repo) {
         return args -> {
             Product AirForce = new Product(
