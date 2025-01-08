@@ -141,26 +141,84 @@
             </div>
         </div>
         <div class="mx-16">
-            <h2 class="">Top Collections</h2>
-            <div class="h-80 flex items-center justify-center gap-12">
-                <div class="text-deft bg-Primary h-full w-1/4 text-3xl flex items-center justify-center font-bold">
-                    <h1 class="text-center w-full">Nike<br><br>Shop Now</h1>
+            <div class="flex mx-auto px-2 py-4">
+                <h2 class="">Trending</h2>
+            </div>
+            <div class="flex ">
+                <button id="prev-btn" class="z-10">PREV</button>
+                <div class="overflow-hidden">
+                    <ul id="carousel-track" class="flex h-80 snap-x snap-mandatory transition-transform ease-in-out">
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8 ">
+                            <h1 class="text-center w-full">Nike<br><br>Shop Now</h1>
+                        </li>
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
+                            <h1 class="text-center w-full">Air Jordan<br><br>Shop Now</h1>
+                        </li>
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
+                            <h1 class="text-center w-full">Adidas<br><br>Shop Now</h1>
+                        </li>
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
+                            <h1 class="text-center w-full">Converse<br><br>Shop Now</h1>
+                        </li>
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
+                            <h1 class="text-center w-full">New Balance<br><br>Shop Now</h1>
+                        </li>
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
+                            <h1 class="text-center w-full">Asics<br><br>Shop Now</h1>
+                        </li>
+                    </ul>
                 </div>
-                <div class="text-deft bg-Primary h-full w-1/4 text-3xl flex items-center justify-center font-bold">
-                    <h1 class="text-center w-full">Air Jordan<br><br>Shop Now</h1>
-                </div>
-                <div class="text-deft bg-Primary h-full w-1/4 text-3xl flex items-center justify-center font-bold">
-                    <h1 class="text-center w-full">Adidas<br><br>Shop Now</h1>
-                </div>
-                <div class="text-deft bg-Primary h-full w-1/4 text-3xl flex items-center justify-center font-bold">
-                    <h1 class="text-center w-full">Converse<br><br>Shop Now</h1>
-                </div>
+                <button id="next-btn" class="z-10">NEXT</button>
             </div>
         </div>
-        <div class="mx-16 h-[50vh] flex items-center justify-center gap-12">
-            <h1 class=""></h1>
-            <div class="grid-cols-5">
-
+        <div class="mx-16">
+            <div class="flex justify-between mx-auto px-2 py-4">
+                <h2 class="">New Arrivals</h2>
+                <a href="" class="underline underline-offset-2">View more</a>
+            </div>
+            <div class="">
+                <div class="grid grid-cols-5 gap-12">
+                    <div class="block border-b-2 border-black py-2">
+                        <a href="" class="flex flex-col items-center text-sm">
+                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="">
+                        </a>
+                        <div class="">
+                            <p class="text-center">Air Force Black</p>
+                        </div>
+                    </div>
+                    <div class="block border-b-2 border-black py-2">
+                        <a href="" class="flex flex-col items-center text-sm">
+                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="">
+                        </a>
+                        <div class="">
+                            <p class="text-center">Air Force Black</p>
+                        </div>
+                    </div>
+                    <div class="block border-b-2 border-black py-2">
+                        <a href="" class="flex flex-col items-center text-sm">
+                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="">
+                        </a>
+                        <div class="">
+                            <p class="text-center">Air Force Black</p>
+                        </div>
+                    </div>
+                    <div class="block border-b-2 border-black py-2">
+                        <a href="" class="flex flex-col items-center text-sm">
+                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="">
+                        </a>
+                        <div class="">
+                            <p class="text-center">Air Force Black</p>
+                        </div>
+                    </div>
+                    <div class="block border-b-2 border-black py-2">
+                        <a href="" class="flex flex-col items-center text-sm">
+                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="">
+                        </a>
+                        <div class="">
+                            <p class="text-center">Air Force Black</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -205,5 +263,76 @@
             <h2 class="copyright">@Ethan Crowson. All rights reserved. 2024.</h2>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById("carousel-track");
+            const prevButton = document.getElementById("prev-btn");
+            const nextButton = document.getElementById("next-btn");
+
+            const items = Array.from(track.children); // All carousel items
+            const itemWidth = items[0].getBoundingClientRect().width + 32; // Get item width
+            const totalItems = items.length+6;
+
+            // Clone items for infinite scrolling
+            const cloneFirst = items.slice(0, 5).map(item => item.cloneNode(true)); // First 2 items
+            const cloneLast = items.slice(-5).map(item => item.cloneNode(true)); // Last 2 items
+            cloneFirst.forEach(item => track.appendChild(item));
+            cloneLast.reverse().forEach(item => track.insertBefore(item, track.firstChild));
+
+            let currentSlide = 6; // Start on the third item to center the view
+
+            // Adjust carousel to center the starting position
+            const adjustInitialPosition = () => {
+                currentSlide = 6;
+                track.style.transition = "none"; // Disable animation during initial setup
+                track.style.transform = `translateX(${-itemWidth * currentSlide}px)`; // Center on the third item
+            };
+
+            // Helper to update the carousel's position
+            const updateCarouselPosition = () => {
+                track.style.transition = "transform 0.5s ease-in-out"; // Smooth animation
+                track.style.transform = `translateX(${-itemWidth * currentSlide}px)`; // Adjust position
+            };
+
+            // Move to the next slide
+            const moveToNextSlide = () => {
+                if (currentSlide < totalItems - 1) {
+                    currentSlide += 1;
+                    updateCarouselPosition();
+                } else {
+                     //If at the last slide, loop back to the first real slide
+                    setTimeout(() => {
+                    adjustInitialPosition();
+                    }, 500);
+                    currentSlide += 1;
+                    updateCarouselPosition();
+                }
+            };
+
+            // Move to the previous slide
+            const moveToPrevSlide = () => {
+                if (currentSlide > 1) {
+                    currentSlide -= 1;
+                    updateCarouselPosition();
+                } else {
+                    // If at the first slide, loop back to the last real slide
+                    setTimeout(() => {
+                        adjustInitialPosition();
+                    }, 500);
+                    currentSlide -= 1;
+                    updateCarouselPosition();
+                }
+            };
+
+            // Event listeners for buttons
+            nextButton.addEventListener("click", moveToNextSlide);
+            prevButton.addEventListener("click", moveToPrevSlide);
+
+            // Initialize position
+            adjustInitialPosition();
+
+        });
+    </script>
 </body>
 </html>
