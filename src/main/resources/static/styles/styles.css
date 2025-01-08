@@ -674,6 +674,10 @@ video {
   min-width: fit-content;
 }
 
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+
 .flex-\[0_0_auto\] {
   flex: 0 0 auto;
 }
@@ -824,6 +828,21 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-12 {
