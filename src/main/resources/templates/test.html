@@ -24,7 +24,7 @@
             FREE RETURNS AND EXCHANGE
         </div>
     </div>
-    <header class="sticky top-0 bg-white px-8 text-Foreground">
+    <header class="sticky top-0 bg-white px-8 text-Foreground z-50">
         <div class="flex items-center">
             <a href="" class="flex-[1.5_0_0%]">
                 <img src="../src/main/resources/static/images/sneakers.png" alt="" class="bg-Foreground p-4 min-w-fit">
@@ -141,11 +141,15 @@
             </div>
         </div>
         <div class="mx-16">
-            <div class="flex mx-auto px-2 py-4">
-                <h2 class="">Trending</h2>
+            <div class="flex mx-auto px-2 py-4 justify-center text-2xl font-bold text-Foreground">
+                <h2 class="">Top Collections</h2>
             </div>
             <div class="flex ">
-                <button id="prev-btn" class="z-10">PREV</button>
+                <button id="prev-btn" class="z-10">
+                    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 7L10 12L15 17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
                 <div class="overflow-hidden">
                     <ul id="carousel-track" class="flex h-80 snap-x snap-mandatory transition-transform ease-in-out">
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8 ">
@@ -168,7 +172,11 @@
                         </li>
                     </ul>
                 </div>
-                <button id="next-btn" class="z-10">NEXT</button>
+                <button id="next-btn" class="z-10">
+                    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-180">
+                        <path d="M15 7L10 12L15 17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
         <div class="mx-16">
@@ -259,9 +267,23 @@
                 </li>
             </ul>
         </div>
-        <div class="flex items-center justify-center bg-Secondary">
-            <h2 class="copyright">@Ethan Crowson. All rights reserved. 2024.</h2>
-        </div>
+        <ul class="flex items-center justify-center my-2 gap-1 text-sm">
+            <li class="">
+                <a href="" class="">Privacy</a>
+                <span aria-hidden="true"> | </span>
+            </li>
+            <li class="">
+                <a href="" class="">Terms & Conditions</a>
+                <span aria-hidden="true"> | </span>
+            </li>
+            <li class="">
+                @Ethan Crowson
+                <span aria-hidden="true"> | </span>
+            </li>
+            <li class="">
+                All Rights reserved
+            </li>
+        </ul>
     </footer>
 
     <script>
@@ -271,7 +293,7 @@
             const nextButton = document.getElementById("next-btn");
 
             const items = Array.from(track.children); // All carousel items
-            const itemWidth = items[0].getBoundingClientRect().width + 32; // Get item width
+            const itemWidth = items[0].getBoundingClientRect().width +32; // Get item width
             const totalItems = items.length+6;
 
             // Clone items for infinite scrolling
