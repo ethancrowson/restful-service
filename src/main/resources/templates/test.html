@@ -89,11 +89,12 @@
 
         </div>
     </header>
-    <div class="block bg-deft w-full h-96">
+    <div class="block bg-deft w-full h-[calc(100vh-90px)] ">
         <img src="" alt="">
+        <div class="flex text-white text-center text-6xl text-bold justify-center items-center h-full">FEATURED BANNER</div>
     </div>
     <div class="8 flex flex-col gap-16 pb-16">
-        <div class="mx-16">
+        <div class="mx-28">
             <div class="flex justify-between mx-auto px-2 py-4 text-lg">
                 <h2 class="font-bold">Trending</h2>
                 <a href="" class="underline underline-offset-2 font-semibold">View more</a>
@@ -155,34 +156,40 @@
                 </button>
                 <div class="overflow-hidden">
                     <ul id="carousel-track" class="flex h-80 snap-x snap-mandatory transition-transform ease-in-out">
-                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8 ">
-                            <a href="" class="w-full h-full">
-                                <img src="../src/main/resources/static/images/nike-cover.png" alt="" class="object-cover w-full h-full">
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
+                            <a href="/collections/nike" class="w-full h-full relative group ">
+                                <img src="../src/main/resources/static/images/nike-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP NIKE</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
-                            <a href="" class="w-full h-full">
-                                <img src="../src/main/resources/static/images/air-jordan-cover.jpg" alt="" class="object-cover w-full h-full">
+                            <a href="/collections/jordan" class="w-full h-full relative group">
+                                <img src="../src/main/resources/static/images/air-jordan-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP JORDAN</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
-                            <a href="" class="w-full h-full">
-                                <img src="../src/main/resources/static/images/adidas-cover.jpg" alt="" class="object-cover w-full h-full">
+                            <a href="/collections/adidas" class="w-full h-full relative group">
+                                <img src="../src/main/resources/static/images/adidas-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP ADIDAS</div>
+                            </a>
+                        </li>
+                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] flex flex-[0_0_auto] items-center justify-center mr-8">
+                            <a href="/collections/converse" class="w-full h-full relative group">
+                                <img src="../src/main/resources/static/images/converse-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP CONVERSE</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
-                            <a href="" class="w-full h-full">
-                                <img src="../src/main/resources/static/images/converse-cover.png" alt="" class="">
+                            <a href="/collections/new-balance" class="w-full h-full relative group">
+                                <img src="../src/main/resources/static/images/new-balance-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP NEW BALANCE</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
-                            <a href="" class="w-full h-full">
-                                <img src="../src/main/resources/static/images/new-balance-cover.png" alt="" class="object-cover w-full h-full">
-                            </a>
-                        </li>
-                        <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
-                            <a href="" class="w-full h-full">
-                                <img src="../src/main/resources/static/images/asics-cover.jpg" alt="" class="object-cover w-full h-full">
+                            <a href="/collections/asics" class="w-full h-full relative group">
+                                <img src="../src/main/resources/static/images/asics-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP ASICS</div>
                             </a>
                         </li>
                     </ul>
@@ -194,7 +201,7 @@
                 </button>
             </div>
         </div>
-        <div class="mx-16">
+        <div class="mx-28">
             <div class="flex justify-between mx-auto px-2 py-4 text-lg">
                 <h2 class="font-bold">New Arrivals</h2>
                 <a href="" class="underline underline-offset-2 font-semibold">View more</a>
