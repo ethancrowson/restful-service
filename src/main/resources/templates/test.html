@@ -32,28 +32,36 @@
             <a href="" class="flex-[1.5_0_0%]">
                 <img src="../src/main/resources/static/images/sneakers.png" alt="" class="bg-Foreground p-4 min-w-fit">
             </a>
-            <nav class="">
-            <ul class="flex flex-row flex-[5_1_0%] h-12 justify-center items-center gap-4 text-xl font-bold">
-                <li class="flex items-center relative h-full">
-                    <a href="" class="flex relative h-full whitespace-nowrap justify-center items-center">Featured</a>
-                </li>
-                <li class="flex items-center relative h-full">
-                    <a href="" class="">New Arrivals</a>
-                </li>
-                <li class="flex items-center relative h-full">
-                    <a href="" class="">Best Sellers</a>
-                </li>
-                <li class="flex flex-row items-center relative h-full">
-                    <a href="" class="flex items-center">Sneakers
-                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 10L12 15L17 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="flex items-center relative h-full text-red-600">
-                    <a href="" class="">Sale</a>
-                </li>
-            </ul>
+            <nav class="h-[58px] flex items-center">
+                <ul class="flex flex-row flex-[5_1_0%] justify-center items-center gap-4 text-xl font-bold h-full">
+                    <li class="flex items-center relative h-full">
+                        <a href="" class="flex relative h-full whitespace-nowrap justify-center items-center">Featured</a>
+                    </li>
+                    <li class="flex items-center relative h-full">
+                        <a href="" class="">New Arrivals</a>
+                    </li>
+                    <li class="flex items-center relative h-full">
+                        <a href="" class="">Best Sellers</a>
+                    </li>
+                    <li class="flex items-center static group h-full">
+                        <a href="" class="flex items-center">Brands
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="group-hover:rotate-180 duration-300">
+                                <path d="M7 10L12 15L17 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="hidden absolute bg-Background z-1 top-[58px] left-0 group-hover:block w-full">
+                            <ul class="flex items-center">
+                                <li class="">Jordan</li>
+                                <li class="">Jordan</li>
+                                <li class="">Jordan</li>
+                                <li class="">Jordan</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex items-center relative h-full text-red-600">
+                        <a href="" class="">Sale</a>
+                    </li>
+                </ul>
             </nav>
             <div class="flex-[1.5_1_0%]">
                 <div class="flex flex-row items-center justify-center gap-4 mr-4">
@@ -97,7 +105,14 @@
         <div class="mx-28">
             <div class="flex justify-between mx-auto px-2 py-4 text-lg">
                 <h2 class="font-bold">Trending</h2>
-                <a href="" class="underline underline-offset-2 font-semibold">View more</a>
+                <a href="" class="flex items-center gap-2 underline underline-offset-2 font-semibold transition-transform duration-300 hover:translate-x-1">
+                    View more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4">
+                        <path d="M18 8L22 12L18 16"></path>
+                        <path d="M2 12H22"></path>
+                    </svg>
+                </a>
             </div>
             <div class="">
                 <div class="grid grid-cols-5 gap-12">
@@ -145,7 +160,7 @@
             </div>
         </div>
         <div class="mx-16">
-            <div class="flex mx-auto px-2 py-4 justify-center text-2xl font-bold text-Foreground">
+            <div class="flex mx-auto px-2 py-4 justify-center text-2xl font-bold text-black">
                 <h2 class="">Top Collections</h2>
             </div>
             <div class="flex ">
@@ -204,7 +219,14 @@
         <div class="mx-28">
             <div class="flex justify-between mx-auto px-2 py-4 text-lg">
                 <h2 class="font-bold">New Arrivals</h2>
-                <a href="" class="underline underline-offset-2 font-semibold">View more</a>
+                <a href="" class="flex items-center gap-2 underline underline-offset-2 font-semibold transition-transform duration-300 hover:translate-x-1">
+                    View more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4">
+                        <path d="M18 8L22 12L18 16"></path>
+                        <path d="M2 12H22"></path>
+                    </svg>
+                </a>
             </div>
             <div class="">
                 <div class="grid grid-cols-5 gap-12">
