@@ -107,14 +107,19 @@
                     </li>
                 </ul>
             </nav>
-            <div class="flex-[1.5_1_0%]">
-                <div class="flex flex-row items-center justify-center gap-4 mr-4">
-                    <div class="flex items-center">
-                        <input placeholder="Search" type="text" class="h-8 border-none bg-input-bg p-[0_35px_0_16px] placeholder-black">
-                        <div class="relative left-[-10%]">
+            <div class="flex-[1.5_1_0%] h-[58px] items-center">
+                <div class="flex flex-row items-center justify-end gap-4 mr-4 h-full">
+                    <div id="search-box" class="relative flex items-center group h-full py-3">
+                        <input id="search-input" placeholder="Search" type="text" class="h-full border-none bg-input-bg p-[0_35px_0_16px] rounded-xl outline-none placeholder-black transition-opacity duration-300 opacity-0">
+                        <div id="search-btn" class="relative left-[-10%] bg-Foreground p-2 rounded-full hover:scale-105 duration-100">
                             <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.5 18.5L22 22" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M6.75 3.27093C8.14732 2.46262 9.76964 2 11.5 2C16.7467 2 21 6.25329 21 11.5C21 16.7467 16.7467 21 11.5 21C6.25329 21 2 16.7467 2 11.5C2 9.76964 2.46262 8.14732 3.27093 6.75" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M18.5 18.5L22 22" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M6.75 3.27093C8.14732 2.46262 9.76964 2 11.5 2C16.7467 2 21 6.25329 21 11.5C21 16.7467 16.7467 21 11.5 21C6.25329 21 2 16.7467 2 11.5C2 9.76964 2.46262 8.14732 3.27093 6.75" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div id="cancel-btn" class="absolute right-0 opacity-0 hover:scale-105 transition-opacity duration-300">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" stroke-width="2" fill="#1C274C"/>
                             </svg>
                         </div>
                     </div>
@@ -383,77 +388,6 @@
             </li>
         </ul>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const track = document.getElementById("carousel-track");
-            const prevButton = document.getElementById("prev-btn");
-            const nextButton = document.getElementById("next-btn");
-
-            const items = Array.from(track.children); // All carousel items
-            const itemWidth = items[0].getBoundingClientRect().width +32; // Get item width
-            const totalItems = items.length+6;
-
-            // Clone items for infinite scrolling
-            const cloneFirst = items.slice(0, 5).map(item => item.cloneNode(true)); // First 2 items
-            const cloneLast = items.slice(-5).map(item => item.cloneNode(true)); // Last 2 items
-            cloneFirst.forEach(item => track.appendChild(item));
-            cloneLast.reverse().forEach(item => track.insertBefore(item, track.firstChild));
-
-            let currentSlide = 6; // Start on the third item to center the view
-
-            // Adjust carousel to center the starting position
-            const adjustInitialPosition = () => {
-                currentSlide = 6;
-                track.style.transition = "none"; // Disable animation during initial setup
-                track.style.transform = `translateX(${-itemWidth * currentSlide}px)`; // Center on the third item
-            };
-
-            // Helper to update the carousel's position
-            const updateCarouselPosition = () => {
-                track.style.transition = "transform 0.5s ease-in-out"; // Smooth animation
-                track.style.transform = `translateX(${-itemWidth * currentSlide}px)`; // Adjust position
-            };
-
-            // Move to the next slide
-            const moveToNextSlide = () => {
-                if (currentSlide < totalItems - 1) {
-                    currentSlide += 1;
-                    updateCarouselPosition();
-                } else {
-                     //If at the last slide, loop back to the first real slide
-                    setTimeout(() => {
-                    adjustInitialPosition();
-                    }, 500);
-                    currentSlide += 1;
-                    updateCarouselPosition();
-                }
-            };
-
-            // Move to the previous slide
-            const moveToPrevSlide = () => {
-                if (currentSlide > 1) {
-                    currentSlide -= 1;
-                    updateCarouselPosition();
-                } else {
-                    // If at the first slide, loop back to the last real slide
-                    setTimeout(() => {
-                        adjustInitialPosition();
-                    }, 500);
-                    currentSlide -= 1;
-                    updateCarouselPosition();
-                }
-            };
-
-            // Event listeners for buttons
-            nextButton.addEventListener("click", moveToNextSlide);
-            prevButton.addEventListener("click", moveToPrevSlide);
-
-            // Initialize position
-            adjustInitialPosition();
-
-        });
-    </script>
     <script src="/scripts/app.js"></script>
 </body>
 </html>
