@@ -11,7 +11,10 @@ module.exports = {
         'Tertiary':  '#899Ea1', //Cool Gray
         'input-bg': '#EFEFF0',
         'deft': '#384162',
-      }
+      },
+      transitionDuration: {
+        '0ms': '0ms',
+      },
     },
   },
   plugins: [],

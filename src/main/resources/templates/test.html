@@ -18,132 +18,135 @@
     <link rel="apple-touch-icon" href="/images/favicon.ico">
 
 </head>
-<body class="min-h-screen font-sans bg-Background">
-    <div class="flex h-8 bg-Foreground text-white items-center justify-center">
-        <div class="text-sm font-semibold">
-            Free Returns
+<body class="min-h-screen font-sans bg-Background ">
+    <div class="relative block w-full top-0 z-50">
+        <div class="flex h-8 bg-Foreground text-white items-center justify-center">
+            <div class="text-sm font-semibold">
+                Free Returns
+            </div>
+            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10L12 15L17 10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
-        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 10L12 15L17 10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
     </div>
-    <header class="sticky top-0 bg-white px-8 text-Foreground z-50">
-        <div class="flex items-center">
-            <a href="/" class="flex-[1.5_0_0%]">
-                <img src="/images/sneakers.png" alt="" class="bg-Foreground p-4 min-w-fit">
-            </a>
-            <nav class="h-[58px] flex items-center">
-                <ul class="flex flex-row flex-[5_1_0%] justify-center items-center gap-4 text-xl font-bold h-full">
-                    <li class="flex items-center relative h-full">
-                        <a href="/collections/featured" class="flex relative h-full whitespace-nowrap justify-center items-center">Featured</a>
-                    </li>
-                    <li class="flex items-center relative h-full">
-                        <a href="/collections/new-arrivals" class="">New Arrivals</a>
-                    </li>
-                    <li class="flex items-center relative h-full">
-                        <a href="/collections/best-sellers" class="">Best Sellers</a>
-                    </li>
-                    <li class="flex items-center static group h-full">
-                        <a href="" class="flex items-center">Brands
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="group-hover:rotate-180 duration-300">
-                                <path d="M7 10L12 15L17 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <div class="absolute bottom-[0px] bg-Background left-0 group-hover:bottom-[-146px] transition-all w-full duration-500 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto">
-                            <div class="grid grid-cols-8 mx-24 py-6 gap-y-5 text-black text-base whitespace-nowrap">
-                                <a href="/collections/adidas" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/adidas-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">ADIDAS</h2>
-                                </a>
-                                <a href="/collections/asics" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/asics-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">ASICS</h2>
-                                </a>
-                                <a href="/collections/converse" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/converse-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">CONVERSE</h2>
-                                </a>
-                                <a href="/collections/jordan" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/jordan-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">JORDAN</h2>
-                                </a>
-                                <a href="/collections/new-balance" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/new-balance-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">NEW BALANCE</h2>
-                                </a>
-                                <a href="/collections/nike" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/nike-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">NIKE</h2>
-                                </a>
-                                <a href="/collections/reebok" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/reebok-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">REEBOK</h2>
-                                </a>
-                                <a href="/collections/vans" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
-                                    <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="/images/vans-logo.png" alt="" class="">
-                                    </div>
-                                    <h2 class="">VANS</h2>
-                                </a>
+    <header class="sticky block top-0 bg-white text-Foreground z-20">
+        <div class="px-8 bg-white">
+            <div class="flex items-center">
+                <a href="/" class="flex-[1.5_0_0%]">
+                    <img src="/images/sneakers.png" alt="" class="bg-Foreground p-4 min-w-fit">
+                </a>
+                <nav class="h-[58px] flex items-center">
+                    <ul class="flex flex-row flex-[5_1_0%] justify-center items-center gap-4 text-xl font-bold h-full">
+                        <li class="flex items-center relative h-full">
+                            <a href="/collections/featured" class="flex relative h-full whitespace-nowrap justify-center items-center">Featured</a>
+                        </li>
+                        <li class="flex items-center relative h-full">
+                            <a href="/collections/new-arrivals" class="">New Arrivals</a>
+                        </li>
+                        <li class="flex items-center relative h-full">
+                            <a href="/collections/best-sellers" class="">Best Sellers</a>
+                        </li>
+                        <li class="flex items-center static group h-full">
+                            <a href="" class="flex items-center">Brands
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="group-hover:rotate-180 duration-300">
+                                    <path d="M7 10L12 15L17 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <div class="absolute bottom-[0px] bg-Background left-0 w-full group-hover:bottom-[-146px]  transition-all duration-500 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none -z-20">
+                                <div class="grid grid-cols-8 mx-24 py-6 gap-y-5 text-black text-base whitespace-nowrap">
+                                    <a href="/collections/adidas" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/adidas-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">ADIDAS</h2>
+                                    </a>
+                                    <a href="/collections/asics" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/asics-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">ASICS</h2>
+                                    </a>
+                                    <a href="/collections/converse" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/converse-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">CONVERSE</h2>
+                                    </a>
+                                    <a href="/collections/jordan" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/jordan-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">JORDAN</h2>
+                                    </a>
+                                    <a href="/collections/new-balance" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/new-balance-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">NEW BALANCE</h2>
+                                    </a>
+                                    <a href="/collections/nike" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/nike-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">NIKE</h2>
+                                    </a>
+                                    <a href="/collections/reebok" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/reebok-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">REEBOK</h2>
+                                    </a>
+                                    <a href="/collections/vans" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
+                                        <div class="flex w-[70px] h-[70px] items-center">
+                                            <img src="/images/vans-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="">VANS</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="flex items-center relative h-full text-red-600">
+                            <a href="/collections/sale" class="">Sale</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex-[1.5_1_0%] h-[58px] items-center">
+                    <div class="flex flex-row items-center justify-end gap-4 mr-4 h-full">
+                        <div id="search-box" class="relative flex items-center group h-full py-3">
+                            <input id="search-input" placeholder="Search" type="text" class="h-full border-none bg-input-bg p-[0_35px_0_16px] rounded-xl outline-none placeholder-black transition-opacity duration-200 opacity-0">
+                            <div id="search-btn" class="relative left-[-10%] bg-Foreground p-2 rounded-full hover:scale-105 duration-100">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.5 18.5L22 22" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M6.75 3.27093C8.14732 2.46262 9.76964 2 11.5 2C16.7467 2 21 6.25329 21 11.5C21 16.7467 16.7467 21 11.5 21C6.25329 21 2 16.7467 2 11.5C2 9.76964 2.46262 8.14732 3.27093 6.75" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div id="cancel-btn" class="absolute right-0 opacity-0 hover:scale-105 transition-opacity duration-200">
+                                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" stroke-width="2" fill="#1C274C"/>
+                                </svg>
                             </div>
                         </div>
-                    </li>
-                    <li class="flex items-center relative h-full text-red-600">
-                        <a href="/collections/sale" class="">Sale</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="flex-[1.5_1_0%] h-[58px] items-center">
-                <div class="flex flex-row items-center justify-end gap-4 mr-4 h-full">
-                    <div id="search-box" class="relative flex items-center group h-full py-3">
-                        <input id="search-input" placeholder="Search" type="text" class="h-full border-none bg-input-bg p-[0_35px_0_16px] rounded-xl outline-none placeholder-black transition-opacity duration-300 opacity-0">
-                        <div id="search-btn" class="relative left-[-10%] bg-Foreground p-2 rounded-full hover:scale-105 duration-100">
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.5 18.5L22 22" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M6.75 3.27093C8.14732 2.46262 9.76964 2 11.5 2C16.7467 2 21 6.25329 21 11.5C21 16.7467 16.7467 21 11.5 21C6.25329 21 2 16.7467 2 11.5C2 9.76964 2.46262 8.14732 3.27093 6.75" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                        <button class="">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="6" r="4" stroke="#1C274C" stroke-width="1.5"/>
+                                <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
-                        </div>
-                        <div id="cancel-btn" class="absolute right-0 opacity-0 hover:scale-105 transition-opacity duration-300">
-                            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" stroke-width="2" fill="#1C274C"/>
+                        </button>
+                        <a href="" class="">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596 6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763 12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM7.00061 16.4209C6.68078 16.1577 6.20813 16.2036 5.94491 16.5234C5.68169 16.8432 5.72758 17.3159 6.04741 17.5791L7.00061 16.4209ZM2.34199 13.4115C2.54074 13.7749 2.99647 13.9084 3.35988 13.7096C3.7233 13.5108 3.85677 13.0551 3.65801 12.6917L2.34199 13.4115ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219ZM9.42605 18.3219C8.63014 17.6945 7.82129 17.0963 7.00061 16.4209L6.04741 17.5791C6.87768 18.2624 7.75472 18.9144 8.49742 19.4999L9.42605 18.3219ZM3.65801 12.6917C3.0968 11.6656 2.75 10.5033 2.75 9.1371H1.25C1.25 10.7746 1.66995 12.1827 2.34199 13.4115L3.65801 12.6917Z" fill="#1C274C"/>
                             </svg>
-                        </div>
+                        </a>
+                        <button class="">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" stroke="#1C274C" stroke-width="1.5"/>
+                                <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z" stroke="#1C274C" stroke-width="1.5"/>
+                                <path d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="">
-                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="6" r="4" stroke="#1C274C" stroke-width="1.5"/>
-                            <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <a href="" class="">
-                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596 6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763 12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM7.00061 16.4209C6.68078 16.1577 6.20813 16.2036 5.94491 16.5234C5.68169 16.8432 5.72758 17.3159 6.04741 17.5791L7.00061 16.4209ZM2.34199 13.4115C2.54074 13.7749 2.99647 13.9084 3.35988 13.7096C3.7233 13.5108 3.85677 13.0551 3.65801 12.6917L2.34199 13.4115ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219ZM9.42605 18.3219C8.63014 17.6945 7.82129 17.0963 7.00061 16.4209L6.04741 17.5791C6.87768 18.2624 7.75472 18.9144 8.49742 19.4999L9.42605 18.3219ZM3.65801 12.6917C3.0968 11.6656 2.75 10.5033 2.75 9.1371H1.25C1.25 10.7746 1.66995 12.1827 2.34199 13.4115L3.65801 12.6917Z" fill="#1C274C"/>
-                        </svg>
-                    </a>
-                    <button class="">
-                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" stroke="#1C274C" stroke-width="1.5"/>
-                            <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z" stroke="#1C274C" stroke-width="1.5"/>
-                            <path d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
-
         </div>
     </header>
     <div class="block bg-deft w-full h-[calc(100vh-90px)] ">
