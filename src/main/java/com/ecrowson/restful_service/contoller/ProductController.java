@@ -37,7 +37,8 @@ public class ProductController {
     }
 
     @GetMapping("/test")
-    public String testThymeleaf() {
+    public String testThymeleaf(Model model) {
+        model.addAttribute("products", productService.getAllProducts());
         return "test";
     }
 

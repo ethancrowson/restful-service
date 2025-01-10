@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Restful Service</title>
-    <link rel="stylesheet" href="../src/main/resources/static/styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <meta name="description" content="">
 
     <meta property="og:title" content="Restful Service">
@@ -13,9 +13,9 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="../favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/favicon.ico">
 
 </head>
 <body class="min-h-screen font-sans bg-Background">
@@ -30,7 +30,7 @@
     <header class="sticky top-0 bg-white px-8 text-Foreground z-50">
         <div class="flex items-center">
             <a href="/" class="flex-[1.5_0_0%]">
-                <img src="../src/main/resources/static/images/sneakers.png" alt="" class="bg-Foreground p-4 min-w-fit">
+                <img src="/images/sneakers.png" alt="" class="bg-Foreground p-4 min-w-fit">
             </a>
             <nav class="h-[58px] flex items-center">
                 <ul class="flex flex-row flex-[5_1_0%] justify-center items-center gap-4 text-xl font-bold h-full">
@@ -53,49 +53,49 @@
                             <div class="grid grid-cols-8 mx-24 py-6 gap-y-5 text-black text-base whitespace-nowrap">
                                 <a href="/collections/adidas" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/adidas-logo.png" alt="" class="">
+                                        <img src="/images/adidas-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">ADIDAS</h2>
                                 </a>
                                 <a href="/collections/asics" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/asics-logo.png" alt="" class="">
+                                        <img src="/images/asics-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">ASICS</h2>
                                 </a>
                                 <a href="/collections/converse" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/converse-logo.png" alt="" class="">
+                                        <img src="/images/converse-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">CONVERSE</h2>
                                 </a>
                                 <a href="/collections/jordan" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/jordan-logo.png" alt="" class="">
+                                        <img src="/images/jordan-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">JORDAN</h2>
                                 </a>
                                 <a href="/collections/new-balance" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/new-balance-logo.png" alt="" class="">
+                                        <img src="/images/new-balance-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">NEW BALANCE</h2>
                                 </a>
                                 <a href="/collections/nike" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/nike-logo.png" alt="" class="">
+                                        <img src="/images/nike-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">NIKE</h2>
                                 </a>
                                 <a href="/collections/reebok" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/reebok-logo.png" alt="" class="">
+                                        <img src="/images/reebok-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">REEBOK</h2>
                                 </a>
                                 <a href="/collections/vans" class="flex flex-col items-center mx-2 border-2 border-black hover:translate-y-2 duration-300">
                                     <div class="flex w-[70px] h-[70px] items-center">
-                                        <img src="../src/main/resources/static/images/vans-logo.png" alt="" class="">
+                                        <img src="/images/vans-logo.png" alt="" class="">
                                     </div>
                                     <h2 class="">VANS</h2>
                                 </a>
@@ -160,45 +160,16 @@
             </div>
             <div class="">
                 <div class="grid grid-cols-5 gap-12 font-semibold">
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
+                    <!--/*@thymesVar id="products" type="java.util.List"*/-->
+                    <div class="block border-b-2 border-black py-2 group hover:brightness-125" th:each="product : ${products}">
+                        <a href="" class="flex flex-col items-center text-base h-full">
+                            <div class="h-[calc(100%-24px)]">
+                                <img width="200px" height="200px" th:src="@{/images/{name}.png(name=${product.description})}" alt="" class="group-hover:scale-110">
+                            </div>
+                            <div class="">
+                                <p class="text-center" th:text="${product.description}"></p>
+                            </div>
                         </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -217,37 +188,37 @@
                     <ul id="carousel-track" class="flex h-80 snap-x snap-mandatory transition-transform ease-in-out">
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
                             <a href="/collections/nike" class="w-full h-full relative group ">
-                                <img src="../src/main/resources/static/images/nike-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <img src="/images/nike-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
                                 <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP NIKE</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
                             <a href="/collections/jordan" class="w-full h-full relative group">
-                                <img src="../src/main/resources/static/images/air-jordan-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <img src="/images/air-jordan-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
                                 <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP JORDAN</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
                             <a href="/collections/adidas" class="w-full h-full relative group">
-                                <img src="../src/main/resources/static/images/adidas-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <img src="/images/adidas-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
                                 <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP ADIDAS</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] flex flex-[0_0_auto] items-center justify-center mr-8">
                             <a href="/collections/converse" class="w-full h-full relative group">
-                                <img src="../src/main/resources/static/images/converse-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <img src="/images/converse-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
                                 <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP CONVERSE</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
                             <a href="/collections/new-balance" class="w-full h-full relative group">
-                                <img src="../src/main/resources/static/images/new-balance-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <img src="/images/new-balance-cover.png" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
                                 <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP NEW BALANCE</div>
                             </a>
                         </li>
                         <li class="snap-start snap-always text-deft bg-Primary h-full min-w-[400px] max-w-[400px] text-3xl flex flex-[0_0_auto] items-center justify-center font-bold mr-8">
                             <a href="/collections/asics" class="w-full h-full relative group">
-                                <img src="../src/main/resources/static/images/asics-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
+                                <img src="/images/asics-cover.jpg" alt="" class="object-cover w-full h-full group-hover:brightness-50 group-hover:scale-105 duration-500">
                                 <div class="absolute text-white bg-black rounded-xl top-4 right-4 px-4 py-2 font-semibold text-lg group-hover:text-black group-hover:bg-white">SHOP ASICS</div>
                             </a>
                         </li>
@@ -274,45 +245,16 @@
             </div>
             <div class="">
                 <div class="grid grid-cols-5 gap-12">
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
+                    <!--/*@thymesVar id="products" type="java.util.List"*/-->
+                    <div class="block border-b-2 border-black py-2 group hover:brightness-125" th:each="product : ${products}">
+                        <a href="" class="flex flex-col items-center text-base h-full">
+                            <div class="h-[calc(100%-24px)]">
+                                <img width="200px" height="200px" th:src="@{/images/{name}.png(name=${product.description})}" alt="" class="group-hover:scale-110">
+                            </div>
+                            <div class="">
+                                <p class="text-center" th:text="${product.description}"></p>
+                            </div>
                         </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
-                    </div>
-                    <div class="block border-b-2 border-black py-2 group hover:brightness-125">
-                        <a href="" class="flex flex-col items-center text-sm">
-                            <img width="200" height="200" src="../src/main/resources/static/images/airforce.png" alt="" class="group-hover:scale-110">
-                        </a>
-                        <div class="">
-                            <p class="text-center">Air Force Black</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -512,5 +454,6 @@
 
         });
     </script>
+    <script src="/scripts/app.js"></script>
 </body>
 </html>
